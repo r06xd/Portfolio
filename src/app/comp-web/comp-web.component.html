@@ -1,0 +1,21 @@
+
+<div class="container-cards">
+  <div #card_back class="card card-back">
+    <img [src]="valorAnterior.image" class="img-card" id="img-card">
+    <div class="content-card">{{valorAnterior.textcontent}}</div>
+  </div>
+  <div #card_actual class="card card-actual">
+    <img [src]="valorActual.image" class="img-card" id="img-card">
+    <div class="content-card">{{valorActual.textcontent}}</div>
+  </div>
+  <div #card_front class="card card-front">
+    <img [src]="valorSiguiente.image" class="img-card" id="img-card">
+    <div class="content-card">{{valorSiguiente.textcontent}}</div>
+  </div>
+</div>
+<a (click)="btnDerecha()"><i>>></i></a>
+<a (click)="btnIzquierda()"><i><<</i></a>
+
+<button class="btn_derecha" id="btnderecha" (click)="btnDerecha()" [disabled]="derechaDisabled">derecha</button>
+<button class="btn_izquierda" id="btnizquierda" (click)="btnIzquierda()" [disabled]="izquierdaDisabled">izquierda</button>
+

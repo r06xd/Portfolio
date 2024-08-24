@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+*{
+  //background-color: #21425c00;
+  font-family:sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background {
+    background-image: linear-gradient(to bottom right , #21425c, black);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  @keyframes enter {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+
+  .content-menu{
+    view-transition-name: contenido-menu;
+  }
+
+  ::view-transition-new(contenido-menu) {
+    animation: enter 1s ease 0s 1 normal forwards;
+  }

@@ -1,0 +1,120 @@
+  <div class ="grid-container">
+    <div id="inicio" class="container-inicio grid-item">
+      <div class="row">
+              <h1></h1>
+              <div class="container-texto">
+                  <h3 class="dev texInicio">DESARROLLADOR.</h3>
+                  <h1 class="texInicio">ROGGER LINDAO</h1>
+                  <h3 class="caveat texInicio">Lo imposible es solo el comienzo...</h3>
+              </div>
+              <img class ="img-perfil" src="assets/img/perfil.png"/>
+      </div>
+      <!--Iconos
+
+      Github
+      linkeding
+      correo
+      CV
+      -->
+    </div>
+  <div class="container-icon grid-item">
+    <div class="icon">
+      <a href="https://github.com/r06xd?tab=repositories"><img class="img-icon" src="assets/img/icon/github.svg"></a>
+      <a href="https://www.linkedin.com/in/rogger-lindao-b4062a100/"><img class="img-icon" src="assets/img/icon/linkedin.svg"></a>
+      <img class="img-icon" src="assets/img/icon/email.png">
+      <img class="img-icon" src="assets/img/icon/pdf.svg">
+    </div>
+  </div>
+  <div id="quiensoy" class="grid-item">
+    <div class="container-presentacion">
+      <div class="presentacion">
+        <h1 class ="texto-presentacion">QUIEN SOY?</h1>
+        <p class ="texto-presentacion">¡Hola! Soy Rogger Lindao, desarrollador con experiencia en .NET, Python, HTML, CSS, JavaScript, microservicios y SQL Server. Me especializo en crear soluciones innovadoras y escalables. Estoy siempre en busca de nuevos desafíos para aplicar mis conocimientos y contribuir al éxito del equipo. ¡Encantado de conocerte!</p>
+      </div>
+      <img class="img-icon-presentacion item-presentacion3" src="assets/img/icon/devIcon.svg">
+    </div>
+    <div class="rotating-face-container">
+      <img [src]="currentFace" alt="Rotating Face" class="rotating-face" [class.rotating]="rotating">
+    </div>
+  </div>
+  <div id="proyectos" class="grid-item">
+    <!--<a (click)="btnDerecha(derechaDisabled)"><img class="arow arow-izquierda"  src="assets/img/icon/arrow-left-thin-svgrepo-com.svg"></a>-->
+    <!--<button class="btn_derecha" id="btnderecha" (click)="btnDerecha(derechaDisabled)" [disabled]="derechaDisabled">derecha</button>-->
+    <p>
+      <svg (click)="btnDerecha(derechaDisabled)"class="img-icon-arow arow" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="800px" height="800px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+      <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472
+        c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z" style="fill: white;"/>
+      <path d="M305.312,148.688c-6.25-6.25-16.375-6.25-22.625,0l-96,96c-6.25,6.25-6.25,16.375,0,22.625l96,96
+        C285.812,366.438,289.906,368,294,368s8.188-1.562,11.312-4.688c6.25-6.25,6.25-16.375,0-22.625L220.625,256l84.688-84.688
+        C311.562,165.062,311.562,154.938,305.312,148.688z" style="fill: white;"/>
+      </svg>
+    </p>
+    <div class="conten-center-proyectos">
+      <div class="container-cards">
+        <div #card_back class="card card-back">
+          <img *ngIf="valorAnterior.image!=''; else img_emty" [src]="valorAnterior.image" class="img-card" id="img-card">
+          <div class="content-card">
+            <h3 class="title-content-card">{{valorAnterior.titleContent}}</h3>
+            {{valorAnterior.textcontent}}
+          </div>
+        </div>
+        <div #card_actual class="card card-actual">
+          <img [src]="valorActual.image" class="img-card" id="img-card">
+          <div class="content-card">
+            <h3 class="title-content-card">{{valorActual.titleContent}}</h3>
+            {{valorActual.textcontent}}
+          </div>
+        </div>
+        <div #card_front class="card card-front">
+          <img *ngIf="valorSiguiente.image!=''; else img_emty" [src]="valorSiguiente.image" class="img-card" id="img-card">
+          <div class="content-card">
+            <h3 class="title-content-card">{{valorSiguiente.titleContent}}</h3>
+            {{valorSiguiente.textcontent}}
+          </div>
+        </div>
+      </div>
+      </div>
+      <ng-template #img_emty></ng-template>
+      <!--<a (click)="btnIzquierda(izquierdaDisabled)"><img class="arow arow-derecha"  src="assets/img/icon/arrow-left-thin-svgrepo-com.svg"></a>-->
+      <p>
+        <svg (click)="btnIzquierda(izquierdaDisabled)" class="img-icon-arow arow" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="800px" height="800px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+            <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472
+            c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z" style="fill: white;"/>
+            <path d="M206.688,363.312c6.25,6.25,16.375,6.25,22.625,0l96-96c6.25-6.25,6.25-16.375,0-22.625l-96-96
+            C226.188,145.562,222.094,144,218,144s-8.188,1.562-11.312,4.688c-6.25,6.25-6.25,16.375,0,22.625L291.375,256l-84.688,84.688
+            C200.438,346.938,200.438,357.062,206.688,363.312z" style="fill: white;"/>
+        </svg>
+    </p>
+      <!--<button class="btn_izquierda" id="btnizquierda" (click)="btnIzquierda(izquierdaDisabled)" [disabled]="izquierdaDisabled">izquierda</button>-->
+  </div>
+  <div id="contactame" class="grid-item">
+    <div class="contactame-column iconos-contactos">
+      <div class="contactame-item"><img class="img-icon-contacto" src="assets/img/icon/correo-electronico.png"><p>r06xd&#64;hotmail.es</p></div>
+      <div class="contactame-item"><img class="img-icon-contacto" src="assets/img/icon/ring-phone.png"><p>+593 998096372</p></div>
+      <div class="contactame-item"><a href="https://api.whatsapp.com/send?phone=593998096372"><img class="item-whatsapp img-icon-contacto" src="assets/img/icon/whatsapp.png"></a><p>+593 998096372</p></div>
+    </div>
+    <div class="contactame-column formulario-contacto">
+      <form [formGroup]="contactForm" (ngSubmit)="enviarEmail()">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" formControlName="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" formControlName="email" required>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" formControlName="mensaje" required></textarea>
+        </div>
+        <button type="submit" [disabled]="!contactForm.valid">Enviar</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+

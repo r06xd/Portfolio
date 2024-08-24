@@ -1,0 +1,373 @@
+/* Estilos para el contenedor principal */
+.container-texto {
+    align-items: flex-start;
+    justify-content: center;
+    //position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(200%);
+    text-align: left;
+    padding-left: 20%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+}
+.grid-item{
+  //background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para el texto "Developer" */
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+/* Estilos para el nombre "Rogger Lindao" */
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Estilos para el texto "Lo imposible es solo el comienzo" */
+h3.caveat {
+    font-family: 'Caveat';
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.dev{
+    color: #F24726;
+}
+.texInicio{
+   margin-bottom: -24px;
+}
+
+.img-perfil{
+    float: right;
+      width: 25%;
+      margin-left: 0px;
+      padding-right: 20%;
+}
+
+.img-icon{
+  border: 10px;
+  width: 15%;
+  padding-left: 10%;
+}
+
+.img-icon:hover{
+  transform: scale(1.5); /* Agranda el ícono en hover */
+  z-index: 10; /* Asegúrate de que el ícono hover esté por encima de los demás */
+  transition: 0.5s;
+}
+
+.img-icon:active{
+  transform: scale(1.2); /* Agranda el ícono en hover */
+  z-index: 10;
+}
+
+.container-icon
+{
+  padding-top: 5%;
+}
+
+.icon{
+
+  //background-color: aliceblue;
+  text-align: center;
+  width: 20%;
+  padding-left: 37%;
+}
+
+.container-presentacion{
+height: 220px;
+display: flex;
+justify-content: center;
+padding-top: 10%;
+}
+.presentacion{
+  width: 40%;
+  height: 100px;
+}
+
+.texto-presentacion{
+  width: 80%;
+  height: 50px;
+  color: white;
+  text-align: justify;
+}
+.img-icon-presentacion{
+  width: 10%;
+  height: 200px;
+}
+
+.rotating-face-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  position:relative;
+  perspective: 1000px;
+  padding-left: 43%;
+  padding-top: 10%;
+}
+
+.rotating-face {
+  width: 100%;
+  height: 110%;
+  transition: transform 0.3s;
+}
+
+.rotating {
+  transform: rotateY(68deg);
+}
+
+@keyframes rowDown {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-9px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(9px);
+	}
+
+	80% {
+		transform: translateY(7.4px);
+	}
+
+	90% {
+		transform: translateY(-7.4px);
+	}
+}
+
+/* PROYECTOS */
+
+#proyectos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conten-center-proyectos{
+  //background-color: #F24726;
+  margin-top: 25px;
+  height: 600px;
+  width: 70%;
+}
+
+.container-cards{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 600px;
+  //background-color: red;
+}
+.card{
+  width: 38%;
+  //background-color: green;
+  //border: 1px solid white;
+}
+.img-card{
+  width: 90%;
+  height: 300px;
+  margin: 5%;
+  border-radius: 10%;
+  //background-color: blue;
+  border: 1px solid white;
+}
+.content-card{
+  width: 100%;
+  height: 300px;
+  color: white;
+  text-align: justify;
+  line-height: 2;
+  //background-color: white;
+  //border: 1px solid white;
+}
+
+.title-content-card{
+  text-align: center;
+}
+
+.card-back
+{
+  opacity: 100;
+  transform: perspective(4000px) rotateY(-50deg);
+  transition: 0.5s;
+}
+.card-actual
+{
+  opacity: 100;
+  transition: 0.5s;
+}
+.card-front
+{
+  opacity: 100;
+  transform: perspective(4000px) rotateY(50deg);
+  transition: 0.5s;
+}
+
+// ANIMACION DERECHA
+.card.animado_back{
+  transform:translateX(-72px) perspective(3950px) rotateY(-60deg);
+  opacity: 0;
+  transition: 0.5s;
+}
+.card.animado_actual{
+  transform:translateX(-72px) perspective(3950px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.card.animado_front{
+  transform:translateX(-72px) perspective(3950px) rotateY(40deg);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+
+//ANIMACION IZQUIERDA
+.card.animadoI_back{
+  transform:translateX(72px) perspective(3950px) rotateY(-40deg);
+  opacity: 0;
+  transition: 0.5s;
+}
+.card.animadoI_actual{
+  transform:translateX(72px) perspective(3950px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.card.animadoI_front{
+  transform:translateX(72px) perspective(3950px) rotateY(60deg);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/* CONTACTAME */
+
+#contactame{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 550px;
+}
+.contactame-column{
+  width: 50%;
+  color: white;
+}
+
+.iconos-contactos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-icon-contacto{
+  width: 100px;
+  margin: 20px 20px;
+}
+
+.contactame-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+}
+
+.item-whatsapp:hover{
+  filter: brightness(1.55);
+  transition: 0.5s
+}
+
+/* FORMULARIO */
+form{
+  display: flex;
+  flex-direction: column;
+  align-items:end;
+}
+
+.formulario-contacto{
+  display: flex;
+  flex-direction: row;
+}
+.form-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 15px 0px;
+  input{
+    width: 300px;
+  }
+  textarea{
+    width: 304px;
+    height: 150px;
+  }
+}
+
+.arow{
+  width: 100px;
+  margin: 20px 20px;
+  color: white;
+}
+
+.arow-derecha{
+  transform: rotateY(180deg);
+}
+
+
+.img-icon-arow:active{
+  transform: scale(0.5);/* disminuye tamanio el ícono en hover */
+  transition: 0.5s;
+}
+
+
+/* TAMANIO PANTALLA */
+
+/* Mobile devices */
+@media (max-width: 320px) and (min-width: 480px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+/* iPads, Tablets */
+@media (max-width: 481px ) and (min-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+/* Small screens, laptops */
+@media (max-width: 769px ) and (min-width: 1024px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+/* Desktops, large screens */
+@media (max-width: 1025px) and (min-width: 1200px) {
+  .text {
+    font-size: 16px;
+  }
+}
