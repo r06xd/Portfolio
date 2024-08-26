@@ -39,16 +39,7 @@
   <div id="proyectos" class="grid-item">
     <!--<a (click)="btnDerecha(derechaDisabled)"><img class="arow arow-izquierda"  src="assets/img/icon/arrow-left-thin-svgrepo-com.svg"></a>-->
     <!--<button class="btn_derecha" id="btnderecha" (click)="btnDerecha(derechaDisabled)" [disabled]="derechaDisabled">derecha</button>-->
-    <p>
-      <svg (click)="btnDerecha(derechaDisabled)"class="img-icon-arow arow" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="800px" height="800px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-      <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472
-        c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z" style="fill: white;"/>
-      <path d="M305.312,148.688c-6.25-6.25-16.375-6.25-22.625,0l-96,96c-6.25,6.25-6.25,16.375,0,22.625l96,96
-        C285.812,366.438,289.906,368,294,368s8.188-1.562,11.312-4.688c6.25-6.25,6.25-16.375,0-22.625L220.625,256l84.688-84.688
-        C311.562,165.062,311.562,154.938,305.312,148.688z" style="fill: white;"/>
-      </svg>
-    </p>
+
     <div class="conten-center-proyectos">
       <div class="container-cards">
         <div #card_back class="card card-back">
@@ -76,7 +67,17 @@
       </div>
       <ng-template #img_emty></ng-template>
       <!--<a (click)="btnIzquierda(izquierdaDisabled)"><img class="arow arow-derecha"  src="assets/img/icon/arrow-left-thin-svgrepo-com.svg"></a>-->
-      <p>
+
+      <!--<button class="btn_izquierda" id="btnizquierda" (click)="btnIzquierda(izquierdaDisabled)" [disabled]="izquierdaDisabled">izquierda</button>-->
+      <div class ="botones-proyectos">
+        <svg (click)="btnDerecha(derechaDisabled)"class="img-icon-arow arow" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="800px" height="800px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+        <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472
+          c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z" style="fill: white;"/>
+        <path d="M305.312,148.688c-6.25-6.25-16.375-6.25-22.625,0l-96,96c-6.25,6.25-6.25,16.375,0,22.625l96,96
+          C285.812,366.438,289.906,368,294,368s8.188-1.562,11.312-4.688c6.25-6.25,6.25-16.375,0-22.625L220.625,256l84.688-84.688
+          C311.562,165.062,311.562,154.938,305.312,148.688z" style="fill: white;"/>
+        </svg>
         <svg (click)="btnIzquierda(izquierdaDisabled)" class="img-icon-arow arow" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="800px" height="800px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
             <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472
@@ -85,9 +86,9 @@
             C226.188,145.562,222.094,144,218,144s-8.188,1.562-11.312,4.688c-6.25,6.25-6.25,16.375,0,22.625L291.375,256l-84.688,84.688
             C200.438,346.938,200.438,357.062,206.688,363.312z" style="fill: white;"/>
         </svg>
-    </p>
-      <!--<button class="btn_izquierda" id="btnizquierda" (click)="btnIzquierda(izquierdaDisabled)" [disabled]="izquierdaDisabled">izquierda</button>-->
-  </div>
+      </div>
+    </div>
+
   <div id="contactame" class="grid-item">
     <div class="contactame-column iconos-contactos">
       <div class="contactame-item"><img class="img-icon-contacto" src="assets/img/icon/correo-electronico.png"><p>r06xd&#64;hotmail.es</p></div>

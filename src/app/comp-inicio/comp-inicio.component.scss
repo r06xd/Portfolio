@@ -53,8 +53,8 @@ h3.caveat {
     float: right;
       width: 25%;
       margin-left: 0px;
-      padding-right: 20%;
-      padding-top: 10%;
+      padding-right: 30vh;
+      padding-top: 20vh;
 }
 
 .img-icon{
@@ -159,12 +159,22 @@ padding-top: 10%;
 	}
 }
 
+.botones-proyectos{
+position: absolute;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
 /* PROYECTOS */
 
 #proyectos{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 15vh;
 }
 
 .conten-center-proyectos{
@@ -325,9 +335,11 @@ form{
 }
 
 .arow{
-  width: 100px;
+  width: 10vh;
   margin: 20px 20px;
   color: white;
+  padding: 0%;
+  height: 50%;
 }
 
 .arow-derecha{
@@ -375,11 +387,22 @@ form{
       padding: 10px;
     }
 
+    .row{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center
+    }
+
     .img-perfil{
         float: left;
         width: 80%;
         margin-left: 0px;
-        padding-left: 10%;
+        padding-left: 0%;
+
+        padding-right: 0%;
+        padding-top: 0%;
   }
 
   /* Estilos para el contenedor principal */
@@ -455,6 +478,44 @@ form{
   }
   .card-front{
     visibility: hidden;
+  }
+
+  .img-card{
+    width: 100%;
+    height: 50%;
+    margin: 0%;
+  }
+
+  .content-card{
+    width: 100%;
+    height: 50%;
+    line-height: 1.5;
+  }
+  .card-actual{
+    width: 100%;
+  }
+
+  #contactame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30vh;
+  }
+  .contactame-item{
+    flex-direction: column;
+  }
+  .iconos-contactos{
+    flex-direction: column;
+  }
+  .formulario-contacto{
+    flex-direction: column;
+  }
+  .contactame-column{
+    width: 100%;
+  }
+  .form-group{
+    flex-direction: column;
   }
 
 }
