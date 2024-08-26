@@ -94,11 +94,11 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px;
-  width: 250px;
+  left: -70%;
+  width: 70%;
   height: 100vh;
   background: #333;
-  z-index: 0;
+  z-index: 1;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -148,30 +148,63 @@
 
 /* TAMANIO PANTALLA */
 
-/* Mobile devices */
-@media (max-width: 320px) and (min-width: 480px) {
-  .text {
-    font-size: 16px;
+ /*Escritorio*/
+@media (min-width: 1199.98px)  {
+  .menu-container{
+    visibility: visible;
+  }
+  .menu-icon{
+    visibility: hidden;
+  }
+}
+/*Fin Escritorio*/
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+  .menu-container{
+    visibility: hidden;
+  }
+  .menu-icon{
+    visibility: visible;
   }
 }
 
-/* iPads, Tablets */
-@media (max-width: 481px ) and (min-width: 768px) {
-  .text {
-    font-size: 16px;
+/*landscape*/
+@media (min0-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+  .menu-container{
+    visibility: visible;
+  }
+  .menu-icon{
+    visibility: hidden;
   }
 }
+/*fin tablet*/
 
-/* Small screens, laptops */
-@media (max-width: 769px ) and (min-width: 1024px) {
-  .text {
-    font-size: 16px;
+/*movil*/
+/*Portrait*/
+/*Default*/
+@media (max-width: 575.98px)and (orientation:portrait) {
+  .menu-container{
+    visibility: hidden;
+  }
+  .menu-icon{
+    visibility: visible;
+    width: 2rem;
+  }
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
   }
 }
-
-/* Desktops, large screens */
-@media (max-width: 1025px) and (min-width: 1200px) {
-  .text {
-    font-size: 16px;
+/*landscape*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+  .menu-container{
+    visibility: hidden;
+  }
+  .menu-icon{
+    visibility: visible;
   }
 }
+/*fin movil*/

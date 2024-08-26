@@ -16,9 +16,7 @@
   grid-gap: 10px;
   padding: 10px;
 }
-.grid-item{
-  //background-color: rgba(255, 255, 255, 0.8);
-}
+
 
 /* Estilos para el texto "Developer" */
 h3 {
@@ -56,6 +54,7 @@ h3.caveat {
       width: 25%;
       margin-left: 0px;
       padding-right: 20%;
+      padding-top: 10%;
 }
 
 .img-icon{
@@ -341,33 +340,127 @@ form{
   transition: 0.5s;
 }
 
-
 /* TAMANIO PANTALLA */
 
-/* Mobile devices */
-@media (max-width: 320px) and (min-width: 480px) {
-  .text {
-    font-size: 16px;
-  }
+ /*Escritorio*/
+ @media (min-width: 1199.98px)  {
+
+}
+/*Fin Escritorio*/
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+
 }
 
-/* iPads, Tablets */
-@media (max-width: 481px ) and (min-width: 768px) {
-  .text {
-    font-size: 16px;
+/*landscape*/
+@media (min0-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+
+}
+/*fin tablet*/
+
+/*movil*/
+/*Portrait*/
+/*Default*/
+@media (max-width: 575.98px)and (orientation:portrait) {
+
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      //grid-template-columns: 1fr;
+      //grid-gap: 10px;
+      padding: 10px;
+    }
+
+    .img-perfil{
+        float: left;
+        width: 80%;
+        margin-left: 0px;
+        padding-left: 10%;
   }
+
+  /* Estilos para el contenedor principal */
+  .container-texto {
+    align-items: flex-start;
+    justify-content: center;
+    //position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(0%);
+    text-align: left;
+    padding-left: 0%;
+  }
+
+  .container-texto h3{
+    font-size: 25px;
+    text-align: center;
+  }
+  .container-texto h1{
+    font-size: 35px;
+    text-align: center;
+  }
+
+    /*Barra de iconos*/
+    .container-icon{
+      padding-top: 40%;
+    }
+  .icon{
+
+    //background-color: aliceblue;
+    text-align: center;
+    width: 100%;
+    padding-left: 0%;
+  }
+
+  /*Quien soy presentacion*/
+  .container-presentacion{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20%
+  }
+
+  .presentacion{
+    width: 100%;
+    height: 100px;
+  }
+  .texto-presentacion{
+    width: 100%;
+    height: 50px;
+  }
+  .img-icon-presentacion{
+    width: 100%;
+    height: 30vh;
+    padding-top: 40%;
+  }
+  .rotating-face{
+    width: 50%;
+  }
+
+  .rotating-face-container{
+    height: 200px;
+    width: 100%;
+    position:relative;
+    perspective: 200px;
+    padding-left: 0%;
+    padding-top: 0%;
+  }
+
+  .card-back{
+    visibility: hidden;
+  }
+  .card-front{
+    visibility: hidden;
+  }
+
 }
 
-/* Small screens, laptops */
-@media (max-width: 769px ) and (min-width: 1024px) {
-  .text {
-    font-size: 16px;
-  }
-}
+/*landscape*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
 
-/* Desktops, large screens */
-@media (max-width: 1025px) and (min-width: 1200px) {
-  .text {
-    font-size: 16px;
-  }
 }
+/*fin movil*/
