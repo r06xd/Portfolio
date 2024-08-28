@@ -21,8 +21,8 @@ export class CompInicioComponent {
     new card('assets/img/proyectos/yuhome-web.png',
       'Creé una página web para un emprendimiento de arquitectura, fusionando un diseño moderno con una interfaz intuitiva. Apliqué mis conocimientos en HTML, CSS y JavaScript para lograr una experiencia de usuario fluida y visualmente atractiva, destacando los proyectos y servicios de la empresa de manera efectiva y profesional.'
       ,"PÁGINA PARA EMPRENDIMIENTO DE ARQUITECTURA"),
-    new card('assets/img/icon/angular.svg', 'programa en angular para escger un nombre',""),
-    new card('assets/img/icon/angular.svg', 'Tarjeta de presentacion con google site',""),
+    new card('assets/img/icon/angular.svg', 'programa en angular para escoger un nombre',""),
+    new card('assets/img/icon/angular.svg', 'Tarjeta de presentación con google site',""),
   ]
 
   @ViewChild('card_back') card_back!: ElementRef;
