@@ -1,3 +1,6 @@
+/*Variables */
+$color-withe: white;
+
 /* Estilos para el contenedor principal */
 .container-texto {
     align-items: flex-start;
@@ -19,19 +22,18 @@
 
 
 /* Estilos para el texto "Developer" */
+h1,h3{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 h3 {
     font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-
 }
 
 /* Estilos para el nombre "Rogger Lindao" */
 h1 {
     font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
+    color: $color-withe;
 }
 
 /* Estilos para el texto "Lo imposible es solo el comienzo" */
@@ -39,7 +41,7 @@ h3.caveat {
     font-family: 'Caveat';
     font-size: 35px;
     margin-bottom: 10px;
-    color: white;
+    color: $color-withe;
 }
 
 .dev{
@@ -80,8 +82,6 @@ h3.caveat {
 }
 
 .icon{
-
-  //background-color: aliceblue;
   text-align: center;
   width: 20%;
   padding-left: 37%;
@@ -101,7 +101,7 @@ padding-top: 10%;
 .texto-presentacion{
   width: 80%;
   height: 50px;
-  color: white;
+  color: $color-withe;
   text-align: justify;
 }
 .img-icon-presentacion{
@@ -178,7 +178,6 @@ align-items: center;
 }
 
 .conten-center-proyectos{
-  //background-color: #F24726;
   margin-top: 25px;
   height: 600px;
   width: 70%;
@@ -189,29 +188,23 @@ align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 600px;
-  //background-color: red;
 }
 .card{
   width: 38%;
-  //background-color: green;
-  //border: 1px solid white;
 }
 .img-card{
   width: 90%;
   height: 300px;
   margin: 5%;
   border-radius: 10%;
-  //background-color: blue;
-  border: 1px solid white;
+  border: 1px solid $color-withe;
 }
 .content-card{
   width: 100%;
   height: 300px;
-  color: white;
+  color: $color-withe;
   text-align: justify;
   line-height: 2;
-  //background-color: white;
-  //border: 1px solid white;
 }
 
 .title-content-card{
@@ -237,55 +230,61 @@ align-items: center;
 }
 
 // ANIMACION DERECHA
-.card.animado_back{
-  transform:translateX(-72px) perspective(3950px) rotateY(-60deg);
+.card.animado_back,
+.card.animado_actual,
+.card.animado_front
+{
   opacity: 0;
   transition: 0.5s;
+}
+.card.animado_back{
+  transform:translateX(-72px) perspective(3950px) rotateY(-60deg);
 }
 .card.animado_actual{
   transform:translateX(-72px) perspective(3950px);
-  opacity: 0;
-  transition: 0.5s;
 }
 .card.animado_front{
   transform:translateX(-72px) perspective(3950px) rotateY(40deg);
-  opacity: 0;
-  transition: 0.5s;
 }
 
 
 //ANIMACION IZQUIERDA
-.card.animadoI_back{
-  transform:translateX(72px) perspective(3950px) rotateY(-40deg);
+.card.animadoI_back,
+.card.animadoI_actual,
+.card.animadoI_front{
   opacity: 0;
   transition: 0.5s;
+}
+
+.card.animadoI_back{
+  transform:translateX(72px) perspective(3950px) rotateY(-40deg);
 }
 .card.animadoI_actual{
   transform:translateX(72px) perspective(3950px);
-  opacity: 0;
-  transition: 0.5s;
 }
 .card.animadoI_front{
   transform:translateX(72px) perspective(3950px) rotateY(60deg);
-  opacity: 0;
-  transition: 0.5s;
 }
 
 /* CONTACTAME */
 
-#contactame{
+#contactame,
+.iconos-contactos,
+.contactame-item{
   display: flex;
+}
+
+#contactame{
   align-items: center;
   justify-content: center;
   margin-top: 550px;
 }
 .contactame-column{
   width: 50%;
-  color: white;
+  color: $color-withe;
 }
 
 .iconos-contactos{
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -297,8 +296,6 @@ align-items: center;
 }
 
 .contactame-item{
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 320px;
@@ -310,18 +307,20 @@ align-items: center;
 }
 
 /* FORMULARIO */
-form{
+form,
+.formulario-contacto,
+.form-group{
   display: flex;
+}
+form{
   flex-direction: column;
   align-items:end;
 }
 
 .formulario-contacto{
-  display: flex;
   flex-direction: row;
 }
 .form-group{
-  display: flex;
   flex-direction: row;
   justify-content: end;
   margin: 15px 0px;
@@ -337,16 +336,10 @@ form{
 .arow{
   width: 10vh;
   margin: 20px 20px;
-  color: white;
+  color: $color-withe;
   padding: 0%;
   height: 50%;
 }
-
-.arow-derecha{
-  transform: rotateY(180deg);
-}
-
-
 .img-icon-arow:active{
   transform: scale(0.5);/* disminuye tamanio el ícono en hover */
   transition: 0.5s;
@@ -356,10 +349,6 @@ form{
 
  /*Escritorio*/
  @media (min-width: 1199.98px)  {
-  .grid-container {
-    //background: #26f282;
-  }
-
 }
 /*Fin Escritorio*/
 
@@ -372,8 +361,6 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    //grid-template-columns: 1fr;
-    //grid-gap: 10px;
     padding: 10px;
   }
 
@@ -400,7 +387,6 @@ form{
   .container-texto{
     align-items: flex-start;
     justify-content: center;
-    //position: absolute;
     top: 50%;
     left: 10%;
     transform: none;
@@ -471,19 +457,16 @@ form{
       flex-direction: row;
       width: 27vh;
     }
-    .iconos-contactos{
-      flex-direction: column;
-    }
-    .formulario-contacto{
+
+
+    .iconos-contactos,
+    .formulario-contacto,
+    .form-group{
       flex-direction: column;
     }
     .contactame-column{
       width: 45%;
     }
-    .form-group{
-      flex-direction: column;
-    }
-
 }
 
 /*landscape*/
@@ -493,8 +476,6 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    //grid-template-columns: 1fr;
-    //grid-gap: 10px;
     padding: 10px;
   }
 
@@ -521,7 +502,6 @@ form{
   .container-texto{
     align-items: flex-start;
     justify-content: center;
-    //position: absolute;
     top: 50%;
     left: 10%;
     transform: none;
@@ -592,17 +572,13 @@ form{
       flex-direction: row;
       width: 27vh;
     }
-    .iconos-contactos{
-      flex-direction: column;
-    }
-    .formulario-contacto{
+    .iconos-contactos,
+    .formulario-contacto,
+    .form-group{
       flex-direction: column;
     }
     .contactame-column{
       width: 45%;
-    }
-    .form-group{
-      flex-direction: column;
     }
 }
 /*fin tablet*/
@@ -612,22 +588,19 @@ form{
 /*Default*/
 @media (max-width: 575.98px)and (orientation:portrait) {
 
+  .grid-container,
+  .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
     .grid-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      //grid-template-columns: 1fr;
-      //grid-gap: 10px;
+
       padding: 10px;
     }
-
     .row{
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center
     }
 
     .img-perfil{
@@ -635,7 +608,6 @@ form{
         width: 80%;
         margin-left: 0px;
         padding-left: 0%;
-
         padding-right: 0%;
         padding-top: 0%;
 
@@ -720,46 +692,42 @@ form{
     visibility: hidden;
   }
 
-  .img-card{
-    width: 100%;
-    height: 50%;
-    margin: 0%;
-  }
-
+  .img-card,
   .content-card{
     width: 100%;
     height: 50%;
+  }
+  .img-card{
+
+    margin: 0%;
+  }
+  .content-card{
     line-height: 1.5;
   }
-  .card-actual{
-    width: 100%;
+
+  .card-actual,
+  #contactame{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+  .card-actual{
+    width: 100%;
+  }
+
   #contactame{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin-top: 30vh;
   }
-  .contactame-item{
-    flex-direction: column;
-  }
-  .iconos-contactos{
-    flex-direction: column;
-  }
-  .formulario-contacto{
+  .contactame-item,
+  .iconos-contactos,
+  .formulario-contacto,
+  .form-group{
     flex-direction: column;
   }
   .contactame-column{
     width: 100%;
-  }
-  .form-group{
-    flex-direction: column;
   }
 
 }
@@ -767,22 +735,20 @@ form{
 /*landscape*/
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
 
-  .grid-container {
+  .grid-container,
+  .row{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    //grid-template-columns: 1fr;
-    //grid-gap: 10px;
+  }
+  .grid-container {
+
     padding: 10px;
   }
 
   .row{
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
   }
 
   .img-perfil{
@@ -798,7 +764,6 @@ form{
 .container-texto {
   align-items: flex-start;
   justify-content: center;
-  //position: absolute;
   top: 50%;
   left: 10%;
   transform: translateY(0%);
@@ -884,35 +849,28 @@ form{
   height: 50%;
   line-height: 1.5;
 }
-.card-actual{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+.card-actual,
 #contactame{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+.card-actual{
+  width: 100%;
+}
+
+#contactame{
   margin-top: 30vh;
 }
-.contactame-item{
-  flex-direction: column;
-}
-.iconos-contactos{
-  flex-direction: column;
-}
-.formulario-contacto{
+.contactame-item,
+.iconos-contactos,
+.formulario-contacto,
+.form-group{
   flex-direction: column;
 }
 .contactame-column{
   width: 100%;
-}
-.form-group{
-  flex-direction: column;
 }
 }
 /*fin movil*/
