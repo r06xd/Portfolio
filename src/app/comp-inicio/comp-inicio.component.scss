@@ -356,19 +356,254 @@ form{
 
  /*Escritorio*/
  @media (min-width: 1199.98px)  {
+  .grid-container {
+    //background: #26f282;
+  }
 
 }
 /*Fin Escritorio*/
 
 /*Tablet*/
 /*Portrait*/
-@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+@media (min-width: 576px) and (max-width: 1199.98px) and (orientation:portrait) {
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //grid-template-columns: 1fr;
+    //grid-gap: 10px;
+    padding: 10px;
+  }
+
+  /*Seccion INICIO*/
+  .row{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  .img-perfil{
+    float: right;
+      width: 25%;
+      margin-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
+}
+
+.container-inicio{
+  height: 40vh;
+}
+  .container-texto{
+    align-items: flex-start;
+    justify-content: center;
+    //position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: none;
+    text-align: left;
+    padding-left: 0px;
+  }
+
+  /* BARRA DE ICONOS */
+      /*Barra de iconos*/
+      .container-icon{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    .icon{
+
+      //background-color: aliceblue;
+      text-align: center;
+      width: 40%;
+      padding-left: 0%;
+    }
+
+    /*Quien soy presentacion*/
+    .container-presentacion{
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      padding-top: 10%;
+    }
+
+    .presentacion{
+      width: 60%;
+      height: 100px;
+    }
+    .texto-presentacion{
+      width: 80%;
+      height: 50px;
+    }
+    .img-icon-presentacion{
+      width: 20%;
+    }
+    .rotating-face{
+      width: initial;
+    }
+
+    .rotating-face-container{
+      height: 15vh;
+      width: 100%;
+      position:relative;
+      perspective: 300px;
+      padding-left: 0%;
+      padding-top: 5vh;
+    }
+
+    #contactame{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 60%;
+      width: 100%;
+    }
+    .contactame-item{
+      flex-direction: row;
+      width: 27vh;
+    }
+    .iconos-contactos{
+      flex-direction: column;
+    }
+    .formulario-contacto{
+      flex-direction: column;
+    }
+    .contactame-column{
+      width: 45%;
+    }
+    .form-group{
+      flex-direction: column;
+    }
 
 }
 
 /*landscape*/
-@media (min0-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //grid-template-columns: 1fr;
+    //grid-gap: 10px;
+    padding: 10px;
+  }
 
+  /*Seccion INICIO*/
+  .row{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  .img-perfil{
+    float: right;
+      width: 25%;
+      margin-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
+}
+
+.container-inicio{
+  height: 80vh;
+}
+  .container-texto{
+    align-items: flex-start;
+    justify-content: center;
+    //position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: none;
+    text-align: left;
+    padding-left: 0px;
+  }
+
+  /* BARRA DE ICONOS */
+      /*Barra de iconos*/
+      .container-icon{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    .icon{
+
+      //background-color: aliceblue;
+      text-align: center;
+      width: 40%;
+      padding-left: 0%;
+    }
+
+    /*Quien soy presentacion*/
+    .container-presentacion{
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      padding-top: 10%;
+    }
+
+    .presentacion{
+      width: 60%;
+      height: 100px;
+    }
+    .texto-presentacion{
+      width: 80%;
+      height: 50px;
+    }
+    .img-icon-presentacion{
+      width: 20%;
+    }
+    .rotating-face{
+      width: initial;
+    }
+
+    .rotating-face-container{
+      height: 15vh;
+      width: 100%;
+      position:relative;
+      perspective: 300px;
+      padding-left: 0%;
+      padding-top: 5vh;
+    }
+
+    #contactame{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30%;
+      width: 100%;
+    }
+    .contactame-item{
+      flex-direction: row;
+      width: 27vh;
+    }
+    .iconos-contactos{
+      flex-direction: column;
+    }
+    .formulario-contacto{
+      flex-direction: column;
+    }
+    .contactame-column{
+      width: 45%;
+    }
+    .form-group{
+      flex-direction: column;
+    }
 }
 /*fin tablet*/
 
@@ -403,7 +638,8 @@ form{
 
         padding-right: 0%;
         padding-top: 0%;
-  }
+
+    }
 
   /* Estilos para el contenedor principal */
   .container-texto {
@@ -473,6 +709,10 @@ form{
     padding-top: 0%;
   }
 
+  /*Proyectos*/
+  .conten-center-proyectos{
+    width: 100%;
+  }
   .card-back{
     visibility: hidden;
   }
@@ -493,6 +733,10 @@ form{
   }
   .card-actual{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   #contactame{
@@ -523,5 +767,152 @@ form{
 /*landscape*/
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
 
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //grid-template-columns: 1fr;
+    //grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .row{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+
+  .img-perfil{
+      float: left;
+      width: 50%;
+      margin-left: 0px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-top: 0%;
+}
+
+/* Estilos para el contenedor principal */
+.container-texto {
+  align-items: flex-start;
+  justify-content: center;
+  //position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(0%);
+  text-align: left;
+  padding-left: 0%;
+}
+
+.container-texto h3{
+  font-size: 25px;
+  text-align: center;
+}
+.container-texto h1{
+  font-size: 35px;
+  text-align: center;
+}
+
+  /*Barra de iconos*/
+  .container-icon{
+    padding-top: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+.icon{
+
+  //background-color: aliceblue;
+  text-align: center;
+  width: 50%;
+  padding-left: 0%;
+}
+
+/*Quien soy presentacion*/
+.container-presentacion{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20%
+}
+
+.presentacion{
+  width: 100%;
+  height: 100px;
+}
+.texto-presentacion{
+  width: 100%;
+  height: 50px;
+}
+.img-icon-presentacion{
+  width: 100%;
+  height: 30vh;
+  padding-top: 20vh;
+}
+.rotating-face{
+  width: 15%;
+}
+
+.rotating-face-container{
+  height: 200px;
+  width: 100%;
+  position:relative;
+  perspective: 200px;
+  padding-left: 0%;
+  padding-top: 20vh;
+}
+
+.card-back{
+  visibility: hidden;
+}
+.card-front{
+  visibility: hidden;
+}
+
+.img-card{
+  width: 150%;
+  height: 50%;
+  margin: 0%;
+}
+
+.content-card{
+  width: 200%;
+  height: 50%;
+  line-height: 1.5;
+}
+.card-actual{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactame{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30vh;
+}
+.contactame-item{
+  flex-direction: column;
+}
+.iconos-contactos{
+  flex-direction: column;
+}
+.formulario-contacto{
+  flex-direction: column;
+}
+.contactame-column{
+  width: 100%;
+}
+.form-group{
+  flex-direction: column;
+}
 }
 /*fin movil*/

@@ -161,12 +161,12 @@
 
 /*Tablet*/
 /*Portrait*/
-@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+@media (min-width: 576px) and (max-width: 1199.98px) and (orientation:portrait) {
   .menu-container{
-    visibility: hidden;
+    visibility: visible;
   }
   .menu-icon{
-    visibility: visible;
+    visibility: hidden;
   }
 }
 
