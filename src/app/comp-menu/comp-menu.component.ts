@@ -20,9 +20,6 @@ export class CompMenuComponent {
     // Ejecuta la lógica deseada aquí
   }
   onElementScroll(event: Event): void {
-    const element = event.target as HTMLElement;
-    const scrollOffset = element.scrollTop;
-    console.log('Scroll Offset:', scrollOffset);
     // Ejecuta la lógica deseada aquí
   }
 

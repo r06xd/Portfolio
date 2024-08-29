@@ -685,11 +685,9 @@ form{
   .conten-center-proyectos{
     width: 100%;
   }
-  .card-back{
-    visibility: hidden;
-  }
+  .card-back,
   .card-front{
-    visibility: hidden;
+    display: none;
   }
 
   .img-card,
@@ -831,11 +829,9 @@ form{
   padding-top: 20vh;
 }
 
-.card-back{
-  visibility: hidden;
-}
+.card-back,
 .card-front{
-  visibility: hidden;
+  display: none;
 }
 
 .img-card{
