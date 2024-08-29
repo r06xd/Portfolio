@@ -28,7 +28,7 @@
     <div class="container-presentacion">
       <div class="presentacion">
         <h1 class ="texto-presentacion">QUIÉN SOY?</h1>
-        <p class ="texto-presentacion">¡Hola! Soy Rogger Lindao, desarrollador con experiencia en .NET, Python, HTML, CSS, JavaScript, microservicios y SQL Server. Me especializo en crear soluciones innovadoras y escalables. Estoy siempre en busca de nuevos desafíos para aplicar mis conocimientos y contribuir al éxito del equipo. ¡Encantado de conocerte!</p>
+        <p class ="texto-presentacion">Soy Rogger Lindao, desarrollador con experiencia en .NET, Python, JavaScript y SQL Server. Especialista en soluciones escalables, busco nuevos desafíos para contribuir al éxito del equipo.</p>
       </div>
       <img class="img-icon-presentacion item-presentacion3" src="assets/img/icon/devIcon.svg">
     </div>
@@ -37,27 +37,34 @@
     </div>
   </div>
   <div id="proyectos" class="grid-item">
-    <!--<a (click)="btnDerecha(derechaDisabled)"><img class="arow arow-izquierda"  src="assets/img/icon/arrow-left-thin-svgrepo-com.svg"></a>-->
-    <!--<button class="btn_derecha" id="btnderecha" (click)="btnDerecha(derechaDisabled)" [disabled]="derechaDisabled">derecha</button>-->
+    <h1>PROYECTOS - EXPERIENCIA</h1>
 
     <div class="conten-center-proyectos">
       <div class="container-cards">
-        <div #card_back class="card card-back">
-          <img *ngIf="valorAnterior.image!=''; else img_emty" [src]="valorAnterior.image" class="img-card" id="img-card">
+        <div #card_back class="card card-back" (click)="btnDerecha(derechaDisabled)">
+          <img *ngIf="valorAnterior.image!=''; else img_emty" [src]="valorAnterior.image" class="img-card" id="img-card" (click)="btnDerecha(derechaDisabled)">
           <div class="content-card">
             <h3 class="title-content-card">{{valorAnterior.titleContent}}</h3>
             {{valorAnterior.textcontent}}
           </div>
         </div>
         <div #card_actual class="card card-actual">
-          <img [src]="valorActual.image" class="img-card" id="img-card">
+          <div *ngIf="valorActual.url!=''; else url_empty">
+            <a [href]="valorActual.url">
+              <img [src]="valorActual.image" class="img-card" id="img-card">
+            </a>
+          </div>
+          <ng-template #url_empty>
+              <img [src]="valorActual.image" class="img-card" id="img-card">
+          </ng-template>
+          
           <div class="content-card">
             <h3 class="title-content-card">{{valorActual.titleContent}}</h3>
             {{valorActual.textcontent}}
           </div>
         </div>
-        <div #card_front class="card card-front">
-          <img *ngIf="valorSiguiente.image!=''; else img_emty" [src]="valorSiguiente.image" class="img-card" id="img-card">
+        <div #card_front class="card card-front" (click)="btnIzquierda(izquierdaDisabled)" >
+          <img *ngIf="valorSiguiente.image!=''; else img_emty" [src]="valorSiguiente.image" class="img-card" id="img-card" (click)="btnIzquierda(izquierdaDisabled)" >
           <div class="content-card">
             <h3 class="title-content-card">{{valorSiguiente.titleContent}}</h3>
             {{valorSiguiente.textcontent}}

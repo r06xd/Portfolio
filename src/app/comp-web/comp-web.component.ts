@@ -13,9 +13,9 @@ export class CompWebComponent {
   constructor(private router: Router) {
   }
   listaCards: card[] = [
-    new card('assets/img/proyectos/yuhome-web.png', 'Pagina para una arquitecta',""),
-    new card('assets/img/icon/angular.svg', 'programa en angular para escger un nombre',""),
-    new card('assets/img/icon/angular.svg', 'Tarjeta de presentacion con google site',""),
+    new card('assets/img/proyectos/yuhome-web.png', 'Pagina para una arquitecta',"",""),
+    new card('assets/img/icon/angular.svg', 'programa en angular para escger un nombre',"",""),
+    new card('assets/img/icon/angular.svg', 'Tarjeta de presentacion con google site',"",""),
   ]
 
   @ViewChild('card_back') card_back!: ElementRef;
@@ -28,9 +28,9 @@ export class CompWebComponent {
   derechaDisabled:boolean=true;
   izquierdaDisabled:boolean=false;
 
-  valorAnterior:card=this.itemAnterior<0? new card("","",""):this.listaCards[this.itemAnterior];
+  valorAnterior:card=this.itemAnterior<0? new card("","","",""):this.listaCards[this.itemAnterior];
   valorActual:card=this.listaCards[this.itemActual];
-  valorSiguiente:card=this.itemSiguiente<0?new card("","",""): this.listaCards[this.itemSiguiente];
+  valorSiguiente:card=this.itemSiguiente<0?new card("","","",""): this.listaCards[this.itemSiguiente];
 
   onInit(){
     window.scrollBy({ top: 2, behavior: 'smooth' });
@@ -70,9 +70,9 @@ export class CompWebComponent {
   }
 
   recarcargar(){
-    this.valorAnterior = this.itemAnterior<0?new card("","",""):this.listaCards[this.itemAnterior];
+    this.valorAnterior = this.itemAnterior<0?new card("","","",""):this.listaCards[this.itemAnterior];
     this.valorActual=this.listaCards[this.itemActual];
-    this.valorSiguiente=this.itemSiguiente<0?new card("","",""): this.listaCards[this.itemSiguiente];
+    this.valorSiguiente=this.itemSiguiente<0?new card("","","",""): this.listaCards[this.itemSiguiente];
   }
 
   animar(){

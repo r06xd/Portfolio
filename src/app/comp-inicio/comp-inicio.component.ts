@@ -20,9 +20,10 @@ export class CompInicioComponent {
   listaCards: card[] = [
     new card('assets/img/proyectos/yuhome-web.png',
       'Creé una página web para un emprendimiento de arquitectura, fusionando un diseño moderno con una interfaz intuitiva. Apliqué mis conocimientos en HTML, CSS y JavaScript para lograr una experiencia de usuario fluida y visualmente atractiva, destacando los proyectos y servicios de la empresa de manera efectiva y profesional.'
-      ,"PÁGINA PARA EMPRENDIMIENTO DE ARQUITECTURA"),
-    new card('assets/img/icon/angular.svg', 'programa en angular para escoger un nombre',""),
-    new card('assets/img/icon/angular.svg', 'Tarjeta de presentación con google site',""),
+      ,"WEB PARA EMPRENDIMIENTO","https://yuhome.netlify.app"),
+    new card('assets/img/icon/angular.svg', 'Para un emprendimiento de camisetas cree un sistema que elige un nombre al azar tomado de un archivo excel',"JUEGO EN ANGULAR",""),
+    new card('assets/img/icon/google-sites.png', 'Para el emprendimiento de una arquitecta cree una tarjeta de presentacion con google site',"TARJETA EN GOOGLE SITE","https://sites.google.com/view/yadirabautista/inicio"),
+    new card('assets/img/icon/netcore.png', 'Colaboración en un sistema de exportacion para una empresa de logistica donde habia gran volumen de datos que manejar, aplicando conocimiento de html, css, boostrap, kendo UI, .net core, microservicios, SQL server, azure devops',"SISTEMA DE EXPORTACION",""),
   ]
 
   @ViewChild('card_back') card_back!: ElementRef;
@@ -35,9 +36,9 @@ export class CompInicioComponent {
   derechaDisabled:boolean=true;
   izquierdaDisabled:boolean=false;
 
-  valorAnterior:card=this.itemAnterior<0? new card("","",""):this.listaCards[this.itemAnterior];
+  valorAnterior:card=this.itemAnterior<0? new card("","","",""):this.listaCards[this.itemAnterior];
   valorActual:card=this.listaCards[this.itemActual];
-  valorSiguiente:card=this.itemSiguiente<0?new card("","",""): this.listaCards[this.itemSiguiente];
+  valorSiguiente:card=this.itemSiguiente<0?new card("","","",""): this.listaCards[this.itemSiguiente];
 
   faces: string[] = [
     'assets/img/icon/angular.svg',
@@ -120,9 +121,9 @@ export class CompInicioComponent {
   }
 
   recarcargar(){
-    this.valorAnterior = this.itemAnterior<0?new card("","",""):this.listaCards[this.itemAnterior];
+    this.valorAnterior = this.itemAnterior<0?new card("","","",""):this.listaCards[this.itemAnterior];
     this.valorActual=this.listaCards[this.itemActual];
-    this.valorSiguiente=this.itemSiguiente<0?new card("","",""): this.listaCards[this.itemSiguiente];
+    this.valorSiguiente=this.itemSiguiente<0?new card("","","",""): this.listaCards[this.itemSiguiente];
   }
 
   animar(){
