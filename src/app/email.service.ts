@@ -11,15 +11,16 @@ export class EmailService {
     
 
     //private apiUrl='https://api.brevo.com/v3/smtp/email';
-    private apiUrl= environment.URL_SERV_EMAIL;
-    private apikey= environment.API_KEY;
+    private apiUrl= environment.URL_SERV_EMAIL.toString();
+    private apikey= environment.API_KEY.toString();
+
     constructor(private http: HttpClient) {
     }
 
     sendEmail(toEmail:string,subject:string,content:string):Observable<any>{
         const headers = new HttpHeaders({
             'content-Type':'application/json',
-            'api-key':this.apikey??''
+            'api-key':this.apikey
         });
 
         const emailData ={
@@ -32,6 +33,6 @@ export class EmailService {
         const datos = JSON.stringify(emailData);
         const datosHeader = JSON.stringify(headers);
 
-        return this.http.post (this.apiUrl??'',datos,{headers});
+        return this.http.post (this.apiUrl,datos,{headers});
     }
 }
