@@ -106,17 +106,18 @@
       <form [formGroup]="contactForm" (ngSubmit)="enviarEmail()">
         <div class="form-group">
           <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" formControlName="nombre" required>
+          <input type="text" [(ngModel)]="name_email" id="nombre" formControlName="nombre" required>
         </div>
         <div class="form-group">
           <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" formControlName="email" required>
+          <input type="email" [(ngModel)]="email" id="email" formControlName="email" required>
         </div>
         <div class="form-group">
           <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" formControlName="mensaje" required></textarea>
+          <textarea id="mensaje" [(ngModel)]="message" formControlName="mensaje" required></textarea>
         </div>
         <button type="submit" [disabled]="!contactForm.valid">Enviar</button>
+        <h3 *ngIf="registerSucess"> {{mensajeEmail}}</h3>
       </form>
     </div>
 

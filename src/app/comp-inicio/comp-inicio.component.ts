@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angula
 import { Router } from '@angular/router';
 import {card} from '../comp-model/model-card';
 import { CommonModule } from '@angular/common';
+import { EmailService } from '../email.service';
 
 @Component({
   selector: 'app-comp-inicio',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './comp-inicio.component.scss'
 })
 export class CompInicioComponent {
-  constructor(private router: Router) {
+  constructor(private router: Router,private emailService:EmailService) {
 
   }
 
@@ -35,6 +36,14 @@ export class CompInicioComponent {
 
   derechaDisabled:boolean=true;
   izquierdaDisabled:boolean=false;
+
+  /*Datos para email*/
+  email: string = '';
+  name_email: string = '';
+  message: string = '';
+  mensajeEmail: string = '';
+  registerSucess: boolean = false;
+
 
   valorAnterior:card=this.itemAnterior<0? new card("","","",""):this.listaCards[this.itemAnterior];
   valorActual:card=this.listaCards[this.itemActual];
@@ -205,7 +214,25 @@ export class CompInicioComponent {
   }
 
   enviarEmail(){
-    console.log("Enviar email");
+    this.emailService.sendEmail(this.email, this.name_email, this.message).subscribe({
+      next: (response) => {
+        console.log('Se envia correctamente');
+        this.mensajeEmail="Email enviado con exito!";
+      },
+      error: (error) => {
+        console.log('Error al enviar correo');
+        this.mensajeEmail="Error al enviar correo";
+      },
+      complete: () => {
+        this.name_email="";
+        this.email="";
+        this.message="";
+        this.registerSucess = true;
+        // Puedes agregar un manejador de complete si es necesario
+      }
+    });
   }
+
+  
 
 }
