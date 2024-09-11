@@ -43,7 +43,6 @@
                 }
               ],
               "scripts": [
-                "node replace-env-vars.js"
               ],
               "budgets": [
                 {
