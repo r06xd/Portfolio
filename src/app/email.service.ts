@@ -23,8 +23,8 @@ export class EmailService {
             'api-key':this.apikey
         });
 
-        console.log('Variable entorno url==>'+this.apiUrl);
-        console.log('Variable entorno key==>'+this.apikey);
+        console.log('Variable entorno url===>'+this.apiUrl);
+        console.log('Variable entorno key===>'+this.apikey);
 
         const emailData ={
             sender:{name:'Portafolio',email:'r06xd@hotmail.es'},
