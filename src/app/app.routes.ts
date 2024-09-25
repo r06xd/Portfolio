@@ -8,5 +8,5 @@ export const routes: Routes = [
     { path: 'comp-inicio', component:CompInicioComponent},
     { path: 'comp-web', component: CompWebComponent },
     { path: 'comp-movil', component: CompMovilComponent },
-    { path: '', redirectTo: '/comp-inicio', pathMatch: 'full' },
+    { path: '', component:CompInicioComponent, pathMatch: 'full' }
 ];
