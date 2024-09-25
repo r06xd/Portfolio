@@ -29,4 +29,11 @@ export class CompMenuComponent {
     console.log("entra a menu");
     this.menuActive = !this.menuActive;
   }
+
+  navegar(idElemento:string):void{
+    const elemento = document.getElementById(idElemento);
+    if(elemento){
+      elemento.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

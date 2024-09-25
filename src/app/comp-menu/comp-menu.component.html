@@ -8,19 +8,19 @@
   <div class="back" [class.active]="menuActive" (click)="toggleMenu()"></div>
   <div class="sidebar" [class.active]="menuActive">
     <ul>
-      <li><a href="/comp-inicio#index">INICIO</a></li>
-      <li><a href="/comp-inicio#quiensoy">SOBRE MI</a></li>
-      <li><a href="/comp-inicio#proyectos">PROYECTOS</a></li>
-      <li><a href="/comp-inicio#contactame">CONTACTO</a></li>
+      <li><p (click)="navegar('index')">INICIO</p></li>
+      <li><p (click)="navegar('quiensoy')">SOBRE MI</p></li>
+      <li><p  (click)="navegar('proyectos')">PROYECTOS</p></li>
+      <li><p  (click)="navegar('contactame')">CONTACTO</p></li>
     </ul>
   </div>
 
     <div class="menu-container">
         <ul class="menu">
-            <li><a href="/comp-inicio#index">INICIO</a></li>
-            <li><a href="/comp-inicio#quiensoy">SOBRE MI</a></li>
-            <li><a href="/comp-inicio#proyectos">PROYECTOS</a></li>
-            <li><a href="/comp-inicio#contactame">CONTACTO</a></li>
+            <li><p (click)="navegar('index')">INICIO</p></li>
+            <li><p (click)="navegar('quiensoy')">SOBRE MI</p></li>
+            <li><p  (click)="navegar('proyectos')">PROYECTOS</p></li>
+            <li><p  (click)="navegar('contactame')">CONTACTO</p></li>
         </ul>
     </div>
 <!--

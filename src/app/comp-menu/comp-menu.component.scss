@@ -23,7 +23,7 @@
             display: inline-block;
         }
 
-        .menu li a {
+        .menu li p {
             display: block;
             color: white;
             text-align: center;
@@ -31,9 +31,10 @@
             margin-right: 30px;
             text-decoration: none;
             border-bottom: 1px solid rgba(255, 0, 0, 0);
+            cursor: pointer;
         }
 
-        .menu li a:hover {
+        .menu li p:hover {
             transition: 0.5s;
             border-bottom: 1px solid red;
         }
