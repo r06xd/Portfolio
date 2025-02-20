@@ -25,6 +25,7 @@ export class CompInicioComponent {
     new card('assets/img/icon/angular.svg', 'Para un emprendimiento de camisetas cree un sistema que elige un nombre al azar tomado de un archivo excel',"JUEGO EN ANGULAR",""),
     new card('assets/img/icon/google-sites.png', 'Para el emprendimiento de una arquitecta cree una tarjeta de presentacion con google site',"TARJETA EN GOOGLE SITE","https://sites.google.com/view/yadirabautista/inicio"),
     new card('assets/img/icon/netcore.png', 'Colaboración en un sistema de exportacion para una empresa de logistica donde habia gran volumen de datos que manejar, aplicando conocimiento de html, css, boostrap, kendo UI, .net core, microservicios, SQL server, azure devops',"SISTEMA DE EXPORTACION",""),
+    new card('assets/img/proyectos/mydayapp.png', 'Aplicando conocimientos de curso de Front con angular de Platzi',"Organizador de Tareas","https://mydayapp-bc653.web.app"),
   ]
 
   @ViewChild('card_back') card_back!: ElementRef;
