@@ -16,7 +16,7 @@ export class CompMenuComponent {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
     const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    console.log('Scroll Offset:', scrollOffset);
+
     // Ejecuta la lógica deseada aquí
   }
   onElementScroll(event: Event): void {
@@ -26,7 +26,6 @@ export class CompMenuComponent {
   menuActive = false;
 
   toggleMenu() {
-    console.log("entra a menu");
     this.menuActive = !this.menuActive;
   }
 
