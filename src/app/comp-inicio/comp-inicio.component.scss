@@ -434,6 +434,7 @@ form{
     }
     .rotating-face{
       width: initial;
+      padding-top: 15%;
     }
 
     .rotating-face-container{
@@ -664,9 +665,9 @@ form{
     height: 50px;
   }
   .img-icon-presentacion{
-    width: 100%;
+    width: 50%;
     height: 30vh;
-    padding-top: 40%;
+    padding: 50% 0% 0% 50%;
   }
   .rotating-face{
     width: 50%;
@@ -677,8 +678,7 @@ form{
     width: 100%;
     position:relative;
     perspective: 200px;
-    padding-left: 0%;
-    padding-top: 0%;
+    padding:20% 0%;
   }
 
   /*Proyectos*/
