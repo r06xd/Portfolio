@@ -34,17 +34,15 @@ export class CompWebComponent {
 
   onInit(){
     window.scrollBy({ top: 2, behavior: 'smooth' });
-    console.log('entra al constructor')
+
     const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    console.log('Scroll Offset web==>:', window.pageYOffset );
+
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
     const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    console.log('Scroll Offset:1', window.pageYOffset );
-    console.log('Scroll Offset:2', document.documentElement.scrollTop);
-    console.log('Scroll Offset:3', document.body.scrollTop);
+
 
     // Navegar a otro componente cuando se desplaza más de 100px
 
@@ -135,8 +133,7 @@ export class CompWebComponent {
     this.itemSiguiente=this.itemActual;
     this.itemActual=this.itemAnterior;
 
-    console.log(this.itemAnterior-1);
-    console.log(this.listaCards.length);
+
     if(this.itemAnterior-1<this.listaCards.length && this.itemAnterior-1>=0)
     {
       this.itemAnterior=this.itemAnterior-1;
