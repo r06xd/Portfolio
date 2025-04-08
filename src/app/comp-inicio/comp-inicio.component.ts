@@ -54,7 +54,8 @@ export class CompInicioComponent {
     'assets/img/icon/angular.svg',
     'assets/img/icon/github.svg',
     'assets/img/icon/net.svg',
-    'assets/img/icon/python.svg'
+    'assets/img/icon/python.svg',
+    'assets/img/icon/Java-logo.png'
   ];
 
   currentFaceIndex: number = 0;
